@@ -73,7 +73,7 @@ function gameLoop() {
     drawBoard();//aula 06
     drawSnake(); //aula 05
     moveSnake();//aula 06
-    drawFood(); //aula 07
+   
 }
 
 setInterval(gameLoop, 150); //aula 05
@@ -92,19 +92,21 @@ function drawBoard(){
 
 //aula 07
 function drawFood() {
-    ctx.fillStyle = 'red';
-    ctx.fillRect(food.x * box, food.y * box, box, box);
+    
 }
 
 //aula 07
 function generateFoodPosition() {
-    let newFoodX, newFoodY;
+    let newFoodX, newFoodY
     do {
-        newFoodX = Math.floor(Math.random() * (canvas.width / box));
-        newFoodY = Math.floor(Math.random() * (canvas.height / box));
+        //posicionar na horizontal
+
+        //posicionar na vertical
+        
     } while (snake.some(segment => segment.x === newFoodX && segment.y === newFoodY));
-    return { x: newFoodX, y: newFoodY };
+    //retornar as novas posições para x e y
+   
 }
 
 //aula 07
-let food = generateFoodPosition(); // Posiciona a comida inicialmente
+// Posiciona a comida inicialmente
